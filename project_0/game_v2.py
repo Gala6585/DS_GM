@@ -13,13 +13,14 @@ def random_predict(number:int=1) -> int:
         int: Число попыток
     """
 
-    count = 0
-
+    predict_number = np.random.randint(1, 101) # загадываем рандомное число, используя генератор рандомных чисел
+    count = 0 # Переменная счетчик
+    min_num = 1 # Минимальное значение рассматриваемого интервала
+    max_num = 100 # Максимальное значение рассматриваемого интервала
     while True:
         count += 1
-        predict_number = np.random.randint(1, 101) # предполагаемое число
-        if number == predict_number:
-            break # выход из цикла, если угадали
+        if predict_number == number:
+            break
     return(count)
 
 
